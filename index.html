@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitCoach — Choose Your Trainer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><div class="brand-mark"></div> FitCoach</div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#testimonials">Results</a>
+        <a href="#booking" class="cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="hero hero-bg">
+    <!-- To use your own background image, replace 'images/your-photo.jpg' below -->
+    <!-- Example: background-image: url('images/your-photo.jpg'); in CSS -->
+    <div class="container hero-inner">
+      <div>
+        <span class="tag">Personal Training • Nutrition • Online Coaching</span>
+        <h1>Find the Right Trainer <br/>for Your Transformation</h1>
+        <p>Choose from experienced fitness trainers specializing in strength, fat loss, or lifestyle coaching. Book your consultation today.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#trainers">Meet Trainers</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRAINERS -->
+  <section id="trainers">
+    <div class="container">
+      <h2 class="section-title">Our Trainers</h2>
+      <div id="trainersGrid" class="cards"></div>
+    </div>
+  </section>
+  
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Client Results</h2>
+      <p class="section-sub">Real transformations with our trainers.</p>
+      <div class="testimonials">
+        <div class="quote"><strong>Armin</strong><br/>“Ali helped me add 30kg to my squat safely in 3 months.”</div>
+        <div class="quote"><strong>Ladan</strong><br/>“Sara changed how I eat and train — I lost 10kg without crazy diets.”</div>
+        <div class="quote"><strong>Omid</strong><br/>“Reza’s online coaching kept me consistent while working long hours.”</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking">
+    <div class="container">
+      <h2 class="section-title">Book Your Consultation</h2>
+      <p class="section-sub">Fill out the form and choose your trainer.</p>
+      <form id="bookingForm" class="form">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="field">
+          <label for="date">Preferred Date</label>
+          <input id="date" name="date" type="date" required />
+        </div>
+        <div class="field">
+          <label for="time">Preferred Time</label>
+          <input id="time" name="time" type="time" required />
+        </div>
+        <div class="field" style="grid-column:1/-1">
+          <label for="trainer">Trainer</label>
+          <select id="trainer" name="trainer" required>
+            <option value="">Select a trainer…</option>
+            <option>Ali — Strength</option>
+            <option>Sara — Fat Loss</option>
+            <option>Reza — Lifestyle</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Send Booking Request</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+      <div>© <span id="year"></span> FitCoach. All rights reserved.</div>
+      <div style="display:flex; gap:14px">
+        <a href="#hero">Home</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#booking">Book</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">✅ Booking request sent!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
